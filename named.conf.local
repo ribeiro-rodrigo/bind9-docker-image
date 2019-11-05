@@ -1,0 +1,22 @@
+//
+// Do any local configuration here
+//
+
+// Consider adding the 1918 zones here, if they are not used in your
+// organization
+//include "/etc/bind/zones.rfc1918";
+
+
+key "test.example.com"{
+	algorithm hmac-md5;
+	secret "NDyxQCyo2mc4rZGqzQKvq5GsHwYsC5WME1oPTkOXDPEEHChIec+3qiwYS4PY+2UdFJ2gNpB3fQDX3NKtP28nzw=="; 
+
+}; 
+
+zone "test.example.com" {
+	type master; 
+	#file "/etc/bind/zones/db.test.example.com";
+	file "/var/lib/bind/zones/db.test.example.com";
+	allow-update {key "test.example.com";};
+	allow-transfer {177.124.207.100;}; 
+}; 
