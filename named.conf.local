@@ -18,5 +18,5 @@ zone "test.example.com" {
 	#file "/etc/bind/zones/db.test.example.com";
 	file "/var/lib/bind/zones/db.test.example.com";
 	allow-update {key "test.example.com";};
-	allow-transfer {177.124.207.100;}; 
+	allow-transfer {any;}; 
 }; 

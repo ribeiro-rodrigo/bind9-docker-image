@@ -20,6 +20,7 @@ COPY ./db.test.example.com /var/lib/bind/zones/db.test.example.com
 RUN mkdir /var/cache/bind
 
 RUN chmod o+wr /var/cache/bind
+RUN chmod o+wr /var/lib/bind/zones
 
 EXPOSE 53
 
