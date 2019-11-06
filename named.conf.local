@@ -20,3 +20,4 @@ zone "test.example.com" {
 	allow-update {key "test.example.com";};
 	allow-transfer {any;}; 
 }; 
+
